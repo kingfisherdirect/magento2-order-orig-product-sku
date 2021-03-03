@@ -1,0 +1,9 @@
+{
+  "name": "kingfisherdirect/magento2-order-orig-product-sku",
+  "description": "Saves original product SKU (without option suffix) in cart items and order items. ",
+  "type": "magento2-module",
+  "license": ["MIT"],
+  "autoload": {
+    "files": [ "registration.php" ]
+  }
+}
