@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <!-- This is a part of require module files -->
+    <module name="KingfisherDirect_QuoteItemProductSku" setup_version="1.0.0">
+    </module>
+</config>

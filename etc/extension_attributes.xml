@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Api/etc/extension_attributes.xsd">
+    <!--
+        This adds product_sku as an extension_attribute to cart item and order items.
+        It only allows using getProductSku and setProductSku methods on the getExtensionAttributes() returned object.
+        It doesn't trigger saving or reading anything anywhere on its own.
+    -->
+    <extension_attributes for="Magento\Quote\Api\Data\CartItemInterface">
+        <attribute code="product_sku" type="string" />
+    </extension_attributes>
+    <extension_attributes for="Magento\Sales\Api\Data\OrderItemInterface">
+        <attribute code="product_sku" type="string" />
+    </extension_attributes>
+</config>

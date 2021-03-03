@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <!-- Create product_sku columns in quote_item and sales_order_item tables, for storing original product_sku value -->
+    <table name="quote_item">
+        <column xsi:type="varchar" name="product_sku" nullable="true" length="255" comment="Product Sku, without options"/>
+    </table>
+    <table name="sales_order_item">
+        <column xsi:type="varchar" name="product_sku" nullable="true" length="255" comment="Product Sku, without options"/>
+    </table>
+</schema>

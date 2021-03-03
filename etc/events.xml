@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="sales_quote_item_set_product">
+        <!--
+            `sales_quote_item_set_product` event is triggered when QuoteItem (instance of CartItemInterface)
+            setProduct() method is called with.
+            Observer copies product sku (without options) to extension_attribute
+        -->
+        <observer name="KingfisherDirectQuoteProductSku" instance="KingfisherDirect\OrderOrigProductSku\Observer\AddProductSku" />
+    </event>
+</config>
