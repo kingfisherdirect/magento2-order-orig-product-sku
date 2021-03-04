@@ -4,7 +4,6 @@ namespace KingfisherDirect\OrderOrigProductSku\Plugin;
 
 use Magento\Framework\Api\ExtensionAttributesFactory;
 use Magento\Quote\Api\CartItemRepositoryInterface;
-use Magento\Quote\Api\Data\CartItemExtensionFactory;
 use Magento\Quote\Api\Data\CartItemInterface;
 use Magento\Sales\Api\Data\OrderItemInterface;
 
@@ -12,15 +11,15 @@ class AddProductSkuRepositoryPlugin
 {
     const PROP_PRODUCT_SKU = 'product_sku';
 
-    // /**
-    //  * @var CartItemExtensionFactory
-    //  */
-    // private $extensionFactory;
+    /**
+     * @var ExtensionAttributesFactory
+     */
+    private $extensionFactory;
 
-    // public function __construct(ExtensionAttributesFactory $extensionFactory)
-    // {
-    //     $this->extensionFactory = $extensionFactory;
-    // }
+    public function __construct(ExtensionAttributesFactory $extensionFactory)
+    {
+        $this->extensionFactory = $extensionFactory;
+    }
 
     public function afterGet($subject, object $item)
     {
